@@ -1,0 +1,5 @@
+edition = "2021"
+
+
+[attr_values]
+class = "Tailwind" # "Tailwind" is the only attribute value formatter available for now
