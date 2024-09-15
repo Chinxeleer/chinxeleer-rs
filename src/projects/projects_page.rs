@@ -1,10 +1,10 @@
 use leptos::*;
 
 #[component]
-pub fn BlogPage() -> impl IntoView {
+pub fn ProjectsPage() -> impl IntoView {
     view! {
         <main class="flex justify-center align-center">
-            <h1 class="font-thin">"Blog Page"</h1>
+            <p>"Projects Page"</p>
         </main>
     }
 }

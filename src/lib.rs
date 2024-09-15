@@ -1,10 +1,11 @@
-pub mod about;
 pub mod app;
 pub mod blog;
 pub mod error_template;
 #[cfg(feature = "ssr")]
 pub mod fileserv;
 pub mod home;
+pub mod projects;
+pub mod resume;
 pub mod routes;
 
 #[cfg(feature = "hydrate")]

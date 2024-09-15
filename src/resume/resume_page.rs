@@ -1,9 +1,9 @@
 use leptos::*;
 
 #[component]
-pub fn AboutPage() -> impl IntoView {
+pub fn ResumePage() -> impl IntoView {
     view! {
-        <main>
+        <main class="flex justify-center align-center">
             <h1>"About Page"</h1>
         </main>
     }

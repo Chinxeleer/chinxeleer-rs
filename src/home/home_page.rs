@@ -1,6 +1,7 @@
 use leptos::*;
+use leptos_router::Outlet;
 
-use crate::home::{home_hero::Hero, home_nav::Nav};
+use crate::home::{home_footer::HomeFooter, home_nav::Nav};
 
 /// Renders the home page of your application.
 #[component]
@@ -10,12 +11,11 @@ pub fn HomePage() -> impl IntoView {
             <div>
                 <Nav />
             </div>
-            <div class="flex flex-1">
-                <div class="flex mx-auto">
-                    <Hero/>
-                </div>
+            <div class="flex-1 p-4">
+                <Outlet />
             </div>
-            <div class="py-4 flex justify-center"><h1>"Footer"</h1></div>
+
+            <HomeFooter />
         </div>
     }
 }
