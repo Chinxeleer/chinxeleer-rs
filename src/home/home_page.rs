@@ -7,7 +7,7 @@ use crate::home::{home_footer::HomeFooter, home_nav::Nav};
 #[component]
 pub fn HomePage() -> impl IntoView {
     view! {
-        <div class="min-h-full flex flex-col">
+        <div class="flex flex-col min-h-screen overscroll-none">
             <div>
                 <Nav />
             </div>
