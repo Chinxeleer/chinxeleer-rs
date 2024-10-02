@@ -28,7 +28,8 @@ pub fn HomeHero() -> impl IntoView {
                     "I am interested in all things Rust 🦀 and Web Development. I build everything in Rust, even this website was built using Rust.
                     I've built terminal apps, games, APIs, and solved Advent of Code problems."
                 </p>
-                <p>"Linux Enthusiast 🐧. I use Arch by the way. I use Linux as my daily driver, growing in understaning the underlying "</p>
+                <p>"Linux Enthusiast 🐧. I use Arch by the way. I use Linux as my daily driver so as to grow in understaning the underlying infrastructure of the Linux Kernel."</p>
+                <p>"As one of the leaders at the Every Nation Campus Wits society, I invest my time in discipling young students. Challenging their world view and ultimately raising them to be leaders too."</p>
             </div>
         </div>
     </main>
