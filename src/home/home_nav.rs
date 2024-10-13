@@ -1,5 +1,4 @@
 use leptos::*;
-use leptos_icons::*;
 use leptos_router::*;
 
 struct Link<'a> {
