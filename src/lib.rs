@@ -1,4 +1,5 @@
 pub mod app;
+pub mod server_functions;
 pub mod blog;
 pub mod error_template;
 #[cfg(feature = "ssr")]

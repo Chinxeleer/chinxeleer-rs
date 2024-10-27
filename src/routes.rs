@@ -1,5 +1,5 @@
 use crate::{
-    blog::blog_page::BlogPage,
+    blog::{blog_list::BlogList, blog_page::BlogPage, blog_view::BlogView},
     home::{home_hero::HomeHero, home_page::HomePage},
     projects::projects_page::ProjectsPage,
     resume::resume_page::ResumePage,
@@ -24,7 +24,10 @@ pub fn MainRoutes() -> impl IntoView {
                     <Route path="" view=HomeHero />
                     <Route path="resume" view=ResumePage />
                     <Route path="projects" view=ProjectsPage />
-                    <Route path="blog" view=BlogPage />
+                    <Route path="blog" view=BlogPage>
+                        <Route path="" view=BlogList/>
+                        <Route path=":post" view=BlogView/>
+                    </Route>
                 </Route>
 
             </Routes>
