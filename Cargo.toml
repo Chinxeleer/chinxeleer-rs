@@ -27,6 +27,7 @@ gray_matter = "0.2.8"
 pulldown-cmark = "0.12.2"
 serde = "1.0.213"
 cfg-if = "1.0.0"
+serde_yaml = "0.9.34"
 
 [features]
 hydrate = ["leptos/hydrate", "leptos_meta/hydrate", "leptos_router/hydrate"]

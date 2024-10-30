@@ -4,16 +4,16 @@ use std::collections::HashMap;
 
 #[derive(Serialize, Deserialize, Debug, Clone)]
 pub struct PostMetadata {
-    pub image_path: String,
     pub title: String,
     pub date: String,
     pub description: String,
-    pub project_link: String,
 }
 
 impl PostMetadata {
     pub fn create_href(&self) -> String {
-        self.title.replace(' ', "-").to_lowercase()
+        let some = self.title.replace(' ', "-").to_lowercase();
+        dbg!(&some);
+        some
     }
 }
 
@@ -37,16 +37,12 @@ impl Post {
 #[derive(Serialize, Deserialize, Debug, PartialEq, Eq, Hash, Clone, Copy)]
 pub enum PostType {
     Blog,
-    Project,
-    Book,
 }
 
 impl std::fmt::Display for PostType {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         match self {
             PostType::Blog => write!(f, "blog"),
-            PostType::Project => write!(f, "projects"),
-            PostType::Book => write!(f, "books"),
         }
     }
 }
@@ -55,8 +51,6 @@ impl std::fmt::Display for PostType {
 pub async fn get_posts() -> Result<HashMap<PostType, Vec<Post>>, ServerFnError> {
     let mut post_paths = HashMap::new();
     post_paths.insert(PostType::Blog, "posts/blog");
-    post_paths.insert(PostType::Project, "posts/projects");
-    post_paths.insert(PostType::Book, "posts/books");
 
     let mut all_posts = HashMap::new();
 
@@ -82,6 +76,7 @@ cfg_if::cfg_if! {
                 .filter(|entry| {
                     if let Ok(file_type) = entry.file_type() {
                         file_type.is_file() && entry.path().extension() == Some("md".as_ref())
+
                     } else {
                         false
                     }
@@ -142,6 +137,8 @@ cfg_if::cfg_if! {
 
             posts
         }
+
+        pub fn load_markdown_file(){}
 
     }
 }

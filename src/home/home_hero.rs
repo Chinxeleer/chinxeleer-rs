@@ -22,7 +22,7 @@ pub fn HomeHero() -> impl IntoView {
                 <h2 class="text-2xl font-bold">About</h2>
                 <p class="px-1">
                     "I am a student at the University of the Witwatersrand studying Computer Science and Applied Mathematics.
-                    I am a developer and a mathematician who is passionate about technology and programming."
+                    I am a developer and a mathematician who loves programming."
                 </p>
                 <p class="px-1">
                     "I am interested in all things Rust 🦀 and Web Development. I build everything in Rust, even this website was built using Rust.
