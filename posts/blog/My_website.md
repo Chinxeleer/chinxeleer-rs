@@ -5,8 +5,6 @@ date: 2024-06-12
 published: true
 ---
 
-# Chinxeleer.io
-
 ## The Journey
 
 I created this website because I was tired of just creating things and letting them stay on my device until they are deleted or until they seem not to be interesting.

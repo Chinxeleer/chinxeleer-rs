@@ -17,48 +17,48 @@ pub fn BlogView() -> impl IntoView {
         .expect("unable to find context");
     view! {
         <div class="bg-slate-900 text-purple-200 mx-auto">
-            <div class="max-w-5xl mx-auto">
-            </div>
+            <div class="max-w-5xl mx-auto"></div>
             <div>
-            <Transition
-            fallback = move || view! { <div>Loading</div> }
-            >
-                <div class="mx-auto">
-                {move ||{
-                         posts().map(|posts| {
-                                match posts{
-                                    Ok(posts) => {
-                                        let post = posts
-                                .get(&PostType::Blog)
-                                .expect("Unable to read the right post_type")
-                                .iter()
-                                .find(|&p| p.post_metadata.create_href() == post_query().to_lowercase());
-                            if let Some(post) = post {
-                                view! {
-                                    <Title text=post.post_metadata.title.clone()/>
-                                    <Meta
-                                        name="description"
-                                        content=post.post_metadata.description.clone()
-                                    />
-                                    <article class="prose prose:text-purple-200" inner_html=post.post_content.clone()></article>
-                                }
-                                    .into_view()
-                            } else {
-                                let mut outside_errors = Errors::default();
-                                outside_errors.insert_with_default_key(AppError::NotFound);
+                <Transition fallback=move || view! { <div>Loading</div> }>
+                    <div class="mx-auto">
+                        {move || {
+                            posts()
+                                .map(|posts| {
+                                    match posts {
+                                        Ok(posts) => {
+                                            let post = posts
+                                                .get(&PostType::Blog)
+                                                .expect("Unable to read the right post_type")
+                                                .iter()
+                                                .find(|&p| {
+                                                    p.post_metadata.create_href() == post_query().to_lowercase()
+                                                });
+                                            if let Some(post) = post {
+                                                view! {
+                                                    <Title text=post.post_metadata.title.clone() />
+                                                    <Meta
+                                                        name="description"
+                                                        content=post.post_metadata.description.clone()
+                                                    />
+                                                    <article
+                                                        class="prose prose-slate"
+                                                        inner_html=post.post_content.clone()
+                                                    ></article>
+                                                }
+                                                    .into_view()
+                                            } else {
+                                                let mut outside_errors = Errors::default();
+                                                outside_errors.insert_with_default_key(AppError::NotFound);
+                                                view! { <ErrorTemplate outside_errors /> }.into_view()
+                                            }
+                                        }
+                                        Err(_) => todo!(),
+                                    }
+                                })
+                        }}
 
-                                view! {  <ErrorTemplate outside_errors/> }
-                                    .into_view()
-                            }},
-                                    Err(_) => todo!(),
-
-
-                            }})
-                    }
-
-                }
-                </div>
-            </Transition>
+                    </div>
+                </Transition>
             </div>
         </div>
     }
