@@ -138,7 +138,6 @@ cfg_if::cfg_if! {
             posts
         }
 
-        pub fn load_markdown_file(){}
 
     }
 }
