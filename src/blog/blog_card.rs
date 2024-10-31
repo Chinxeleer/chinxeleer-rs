@@ -10,9 +10,6 @@ pub fn BlogCard(title: String, date: String, link: String, summary: String) -> i
                 <p class="mt-1 text-xs font-medium uppercase text-gray-500 ">
                     {date}
                 </p>
-                <p class="mt-2 text-gray-500 dark:text-neutral-400">
-                {summary}
-                </p>
             </div>
         </A>
     }

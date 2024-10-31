@@ -41,7 +41,7 @@ pub fn BlogView() -> impl IntoView {
                                                         content=post.post_metadata.description.clone()
                                                     />
                                                     <article
-                                                        class="prose prose-slate"
+                                                        class="prose prose-slate prose-a:text-purple-600 prose-p:text-sm text-justify pt-20"
                                                         inner_html=post.post_content.clone()
                                                     ></article>
                                                 }
