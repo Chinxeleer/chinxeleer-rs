@@ -5,8 +5,8 @@ use leptos_image::Image;
 pub fn HomeHero() -> impl IntoView {
     view! {
 
-    <main class="flex flex-col text-pink-100 items-center mt-10">
-        <div class="max-w-5xl mx-auto mt-4 space-y-10">
+    <main class="flex flex-col text-pink-100 items-center mt-4">
+        <div class="max-w-5xl mx-auto space-y-10">
             //<!-- Social Links Section -->
             <div class="flex rounded-full justify-center">
 
@@ -17,6 +17,7 @@ pub fn HomeHero() -> impl IntoView {
             width=150
             height=150
             quality=100
+            priority=true
             class="rounded-full anti-aliasing"
                 />
 
