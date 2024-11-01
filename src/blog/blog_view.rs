@@ -40,7 +40,7 @@ pub fn BlogView() -> impl IntoView {
                                         name="description"
                                         content=post.post_metadata.description.clone()
                                     />
-                                    <article class="prose prose-p:text-purple-100 prose-strong:text-purple-200 prose-code:text-teal-200 prose-p:text-sm prose-headings:text-purple-200 prose-slate prose-a:text-purple-200 text-justify pt-20 prose-h1:text-center prose-h2:text-2xl prose-h1:text-3xl" inner_html=post.post_content.clone()></article>
+                                    <article class="prose prose-p:text-white prose-strong:text-purple-200 prose-code:text-teal-200 prose-p:text-sm prose-headings:text-purple-200 prose-slate prose-a:text-purple-200 text-justify pt-20 prose-h1:text-center prose-h2:text-2xl prose-h1:text-3xl" inner_html=post.post_content.clone()></article>
                                 }
                                     .into_view()
                             } else {
