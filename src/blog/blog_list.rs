@@ -21,8 +21,7 @@ pub fn BlogList() -> impl IntoView {
                                     content="chinxeleer's backdoor innovative thoughts"                                />
 
     <div class="mx-auto">
-        <h1 class="font-bold text-xl text-center">"Blog"</h1>
-            <div class="min-h-full mx-auto space-y-4 overflow-scroll">
+            <div class="min-h-full mx-auto space-y-4 mt-10 overflow-scroll">
             {move ||{
                      posts().map(|posts| {
                             match posts{
