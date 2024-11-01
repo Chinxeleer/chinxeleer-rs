@@ -16,7 +16,7 @@ pub fn BlogView() -> impl IntoView {
     let posts = use_context::<Resource<(), Result<HashMap<PostType, Vec<Post>>, ServerFnError>>>()
         .expect("unable to find context");
     view! {
-        <div class="bg-slate-900 text-slate-100 mx-auto">
+        <div class="text-slate-100 mx-auto">
             <div class="max-w-5xl mx-auto">
             </div>
             <div>
@@ -40,7 +40,7 @@ pub fn BlogView() -> impl IntoView {
                                         name="description"
                                         content=post.post_metadata.description.clone()
                                     />
-                                    <article class="prose prose-p:text-white prose-strong:text-purple-200 prose-code:text-orange-200 prose-p:text-sm prose-headings:text-purple-200 prose-slate prose-a:text-purple-200 text-justify prose-h1:text-center prose-h2:text-2xl prose-h1:text-3xl pb-20 " inner_html=post.post_content.clone()></article>
+                                    <article class="prose prose-sm md:prose-lg rose-pre:bg-gray-900 text-wrap prose-pre:p-2 prose-pre:m-0 md:prose-code:p-2 prose-p:m-1 prose-p:text-pink-50 prose-strong:text-purple-200 prose-code:text-orange-200 prose-code:bg-gray-900 prose-p:text-sm prose-headings:text-purple-200 prose-slate prose-a:text-purple-200 underline-offset-2 decoration-2 text-justify prose-h1:text-center prose-h2:text-2xl prose-h1:text-3xl pb-20 " inner_html=post.post_content.clone()></article>
                                 }
                                     .into_view()
                             } else {

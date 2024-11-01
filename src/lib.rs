@@ -1,5 +1,4 @@
 pub mod app;
-pub mod server_functions;
 pub mod blog;
 pub mod error_template;
 #[cfg(feature = "ssr")]
@@ -8,6 +7,7 @@ pub mod home;
 pub mod projects;
 pub mod resume;
 pub mod routes;
+pub mod server_functions;
 
 #[cfg(feature = "hydrate")]
 #[wasm_bindgen::prelude::wasm_bindgen]

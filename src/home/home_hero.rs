@@ -1,24 +1,29 @@
 use leptos::*;
-use leptos_icons::*;
-use leptos_router::A;
+use leptos_image::Image;
 
 #[component]
 pub fn HomeHero() -> impl IntoView {
     view! {
 
-    <main class="flex flex-col text-white items-center mt-10">
-        <div class="max-w-5xl mx-auto mt-4 space-y-10">
+    <main class="flex flex-col text-pink-100 items-center mt-4">
+        <div class="max-w-5xl mx-auto space-y-10">
             //<!-- Social Links Section -->
-            <div class="flex justify-center flex-row mt-4 space-x-4">
-                <A href="https://github.com/Chinxeleer" class="hover:text-slate-300">
-                    <Icon icon=icondata::AiGithubFilled width="2rem" height="2rem" />
-                </A>
-                <A href="https://www.linkedin.com/in/blessing-kodze-a86302212/" class="hover:text-slate-300">
-                    <Icon icon=icondata::AiLinkedinFilled width="2rem" height="2rem" />
-                </A>
+            <div class="flex rounded-full justify-center">
+
+            // TODO:Add an image of me
+            <Image
+            src="pictures/profile.jpg"
+            blur=true
+            width=150
+            height=150
+            quality=100
+            priority=true
+            class="rounded-full anti-aliasing"
+                />
+
             </div>
             //<!-- About Section -->
-            <div class="flex flex-col justify-center items-start text-justify text-sm lg:text-base mt-10 max-w-xl space-y-6">
+            <div class="flex flex-col items-start text-justify text-sm lg:text-base mt-10 max-w-xl space-y-6">
                 <h2 class="text-2xl font-bold">About</h2>
                 <p class="px-1">
                     "I am a student at the University of the Witwatersrand studying Computer Science and Applied Mathematics.
