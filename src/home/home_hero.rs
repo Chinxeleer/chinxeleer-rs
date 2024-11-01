@@ -6,7 +6,7 @@ use leptos_router::A;
 pub fn HomeHero() -> impl IntoView {
     view! {
 
-    <main class="flex flex-col items-center mt-10">
+    <main class="flex flex-col text-white items-center mt-10">
         <div class="max-w-5xl mx-auto mt-4 space-y-10">
             //<!-- Social Links Section -->
             <div class="flex justify-center flex-row mt-4 space-x-4">

@@ -2,7 +2,7 @@ use std::collections::HashMap;
 
 use leptos::*;
 use leptos_meta::{Meta, Title};
-use leptos_router::{use_params_map, A};
+use leptos_router::use_params_map;
 
 use crate::{
     error_template::{AppError, ErrorTemplate},
@@ -40,7 +40,7 @@ pub fn BlogView() -> impl IntoView {
                                         name="description"
                                         content=post.post_metadata.description.clone()
                                     />
-                                    <article class="prose prose-p:text-white prose-strong:text-purple-200 prose-code:text-orange-200 prose-p:text-sm prose-headings:text-purple-200 prose-slate prose-a:text-purple-200 text-justify pt-20 prose-h1:text-center prose-h2:text-2xl prose-h1:text-3xl" inner_html=post.post_content.clone()></article>
+                                    <article class="prose prose-p:text-white prose-strong:text-purple-200 prose-code:text-orange-200 prose-p:text-sm prose-headings:text-purple-200 prose-slate prose-a:text-purple-200 text-justify prose-h1:text-center prose-h2:text-2xl prose-h1:text-3xl pb-20 " inner_html=post.post_content.clone()></article>
                                 }
                                     .into_view()
                             } else {

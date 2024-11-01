@@ -5,6 +5,7 @@ date: 2024-06-12
 published: true
 ---
 
+# App to PATH in linux
 
 To make your Rust command-line application accessible from anywhere on Linux, you need to ensure that its executable binary is available in a directory that's included in the system's PATH environment variable. Here's how you can achieve this:
 
