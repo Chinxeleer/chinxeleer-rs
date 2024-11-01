@@ -1,6 +1,5 @@
 use leptos::*;
-use leptos_icons::*;
-use leptos_router::A;
+use leptos_image::Image;
 
 #[component]
 pub fn HomeHero() -> impl IntoView {
@@ -9,9 +8,17 @@ pub fn HomeHero() -> impl IntoView {
     <main class="flex flex-col text-pink-100 items-center mt-10">
         <div class="max-w-5xl mx-auto mt-4 space-y-10">
             //<!-- Social Links Section -->
-            <div class="flex justify-center flex-row mt-4 space-x-4">
+            <div class="flex rounded-full justify-center">
 
             // TODO:Add an image of me
+            <Image
+            src="pictures/profile.jpg"
+            blur=true
+            width=150
+            height=150
+            quality=100
+            class="rounded-full anti-aliasing"
+                />
 
             </div>
             //<!-- About Section -->

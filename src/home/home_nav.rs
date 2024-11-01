@@ -29,7 +29,7 @@ pub fn Nav() -> impl IntoView {
     ];
     view! {
         <nav class="flex text-pink-100 justify-center">
-            <ul class="flex py-4 items-center space-x-4">
+            <ul class="flex flex-col md:flex-row py-4 items-center space-x-4">
                 <div class="flex">
                     {links
                         .into_iter()
