@@ -2,7 +2,7 @@ use std::collections::HashMap;
 
 use leptos::*;
 use leptos_meta::{Meta, Title};
-use leptos_router::use_params_map;
+use leptos_router::{use_params_map, A};
 
 use crate::{
     error_template::{AppError, ErrorTemplate},
@@ -59,6 +59,7 @@ pub fn BlogView() -> impl IntoView {
                 }
                 </div>
             </Transition>
+            <div><A href="./">Back</A></div>
             </div>
         </div>
     }
