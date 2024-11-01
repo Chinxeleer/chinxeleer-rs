@@ -37,7 +37,7 @@ pub fn Nav() -> impl IntoView {
                                 if n.name == "Home" {
                                     view! {
                                         <A href=n.href>
-                                            <h1 class="px-2 md:px-4 py-2 text-base antialiased md:text-xl font-bold hover:text-rose-300">
+                                            <h1 class="px-2 md:px-4 py-2 text-base antialiased md:text-xl font-bold hover:text-slate-300">
                                             "Blessing Kodze"
                                             </h1>
                                         </A>
@@ -45,7 +45,7 @@ pub fn Nav() -> impl IntoView {
                                 } else {
                                     view! {
                                         <A href=n.href>
-                                            <p class="px-2 md:px-4 py-2 font-normal hover:underline hover:text-rose-300 underline-offset-4 decoration-2 ">
+                                            <p class="px-2 md:px-4 py-2 font-normal hover:underline hover:text-slate-300 underline-offset-4 decoration-2 ">
                                                 {n.name}
                                             </p>
                                         </A>

@@ -10,10 +10,10 @@ pub fn HomeHero() -> impl IntoView {
         <div class="max-w-5xl mx-auto mt-4 space-y-10">
             //<!-- Social Links Section -->
             <div class="flex justify-center flex-row mt-4 space-x-4">
-                <A href="https://github.com/Chinxeleer" class="hover:text-rose-300">
+                <A href="https://github.com/Chinxeleer" class="hover:text-slate-300">
                     <Icon icon=icondata::AiGithubFilled width="2rem" height="2rem" />
                 </A>
-                <A href="https://www.linkedin.com/in/blessing-kodze-a86302212/" class="hover:text-rose-300">
+                <A href="https://www.linkedin.com/in/blessing-kodze-a86302212/" class="hover:text-slate-300">
                     <Icon icon=icondata::AiLinkedinFilled width="2rem" height="2rem" />
                 </A>
             </div>
