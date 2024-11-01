@@ -40,7 +40,8 @@ RUN apt-get update -y \
 # -- NB: update binary name from "leptos_start" to match your app name in Cargo.toml --
 # Copy the server binary to the /app directory
 COPY --from=builder /app/target/release/chinxeleer-rust /app/
-
+COPY --from=builder /app/posts /app/posts
+COPY --from=builder /app/public /app/public
 # /target/site contains our JS/WASM/CSS, etc.
 COPY --from=builder /app/target/site /app/site
 

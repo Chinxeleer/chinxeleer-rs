@@ -71,7 +71,7 @@ cfg_if::cfg_if! {
 
         pub fn get_posts_file<P: AsRef<Path>>(path: P) -> Vec<DirEntry> {
             fs::read_dir(path)
-                .unwrap()
+                .expect("Could not read posts")
                 .filter_map(Result::ok)
                 .filter(|entry| {
                     if let Ok(file_type) = entry.file_type() {
