@@ -11,7 +11,7 @@ use leptos_router::*;
 #[component]
 pub fn MainRoutes() -> impl IntoView {
     view! {
-        <Stylesheet id="leptos" href="/pkg/chinxeleer-rust.css" />
+        <Stylesheet id="leptos" href="/pkg/chinxeleer-rs.css" />
 
         // sets the document title
         <Title text="chinxeleer" />

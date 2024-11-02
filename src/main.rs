@@ -3,8 +3,8 @@
 async fn main() {
     use axum::routing::post;
     use axum::Router;
-    use chinxeleer_rust::app::*;
-    use chinxeleer_rust::fileserv::file_and_error_handler;
+    use chinxeleer_rs::app::*;
+    use chinxeleer_rs::fileserv::file_and_error_handler;
     use leptos::*;
     use leptos_axum::{generate_route_list, handle_server_fns, LeptosRoutes};
     use leptos_image::{ImageCacheRoute, ImageOptimizer};
