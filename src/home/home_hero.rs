@@ -9,18 +9,15 @@ pub fn HomeHero() -> impl IntoView {
         <div class="max-w-5xl mx-auto space-y-10">
             //<!-- Social Links Section -->
             <div class="flex rounded-full justify-center">
-
-            // TODO:Add an image of me
-            <Image
-            src="pictures/profile.jpg"
-            blur=true
-            width=150
-            height=150
-            quality=100
-            priority=true
-            class="rounded-full anti-aliasing"
-                />
-
+                                     <Image
+                        src="pictures/profile.jpg"
+                        blur=true
+                        width=150
+                        height=150
+                        quality=100
+                        priority=true
+                        class="rounded-full anti-aliasing"
+                        />
             </div>
             //<!-- About Section -->
             <div class="flex flex-col items-start text-justify text-sm lg:text-base mt-10 max-w-xl space-y-6">
