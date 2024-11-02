@@ -24,17 +24,30 @@ pub fn HomeHero() -> impl IntoView {
             </div>
             //<!-- About Section -->
             <div class="flex flex-col items-start text-justify text-sm lg:text-base mt-10 max-w-xl space-y-6">
-                <h2 class="text-2xl font-bold">About</h2>
+                <h2 class="text-2xl font-extrabold">About</h2>
                 <p class="px-1">
-                    "I am a student at the University of the Witwatersrand studying Computer Science and Applied Mathematics.
-                    I am a developer and a mathematician who loves programming."
-                </p>
+                    "I'm a Computer Science and Applied Mathematics student at the University of the Witwatersrand,
+                    with a strong foundation in both programming and mathematics. My work focuses on leveraging these 
+                    skills to build robust and innovative projects.
+                    I’m particularly drawn to Rust 🦀 and web development,
+                    and I aim to build as much as possible in Rust — including this very website."</p>
+
+                <h3 class="text-xl font-bold">"🔨 Projects"</h3>
                 <p class="px-1">
-                    "I am interested in all things Rust 🦀 and Web Development. I build everything in Rust, even this website was built using Rust.
-                    I've built terminal apps, games, APIs, and solved Advent of Code problems."
+                    "My journey as a developer has taken me through a diverse range of projects:"
                 </p>
-                <p>"Linux Enthusiast 🐧. I use Arch by the way. I use Linux as my daily driver so as to grow in understaning the underlying infrastructure of the Linux Kernel."</p>
-                <p>"As one of the leaders at the Every Nation Campus Wits society, I invest my time in discipling young students. Challenging their world view and ultimately raising them to be leaders too."</p>
+                <ul class="list-disc pl-5">
+                <li><span class="font-bold text-purple-200">"Terminal Applications"</span>" – From efficient, minimalist tools to full-scale games."</li>
+                <li><span class="font-bold text-purple-200">"APIs and Web Services"</span>" – Crafting backend solutions with reliability and performance in mind."</li>
+                <li><span class="font-bold text-purple-200">"Advent of Code Solutions"</span>" – Tackling complex, algorithmic challenges during the holiday season."</li>
+                </ul>
+                <p>"Each project is an opportunity to explore new areas and expand my understanding of programming, Rust, and mathematics."</p>
+
+                <h3 class="text-xl font-bold">"🐧 Linux Enthusiast"</h3>
+                <p>"Linux is central to my development workflow. I use Arch Linux as my daily driver, a choice that allows me to engage deeply with the Linux Kernel and its infrastructure. This hands-on experience continually strengthens my technical expertise and understanding of operating systems."</p>
+                <h3 class="text-xl font-bold">"🌱 Leadership at Every Nation Campus Wits"</h3>
+                <p>"Outside of tech, I’m involved in student mentorship as a leader at Every Nation Campus Wits.
+                Here, I invest my time in guiding young students, challenging their perspectives, and helping them grow into leaders ready to make a positive impact in the world."</p>
             </div>
         </div>
     </main>
