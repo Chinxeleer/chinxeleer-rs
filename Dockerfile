@@ -39,7 +39,7 @@ RUN apt-get update -y \
 
 # -- NB: update binary name from "leptos_start" to match your app name in Cargo.toml --
 # Copy the server binary to the /app directory
-COPY --from=builder /app/target/release/chinxeleer /app/
+COPY --from=builder /app/target/release/chinxeleer.rs /app/
 COPY --from=builder /app/posts /app/posts
 COPY --from=builder /app/public /app/public
 # /target/site contains our JS/WASM/CSS, etc.
@@ -56,4 +56,4 @@ EXPOSE 8080
 
 # -- NB: update binary name from "leptos_start" to match your app name in Cargo.toml --
 # Run the server
-CMD ["/app/chinxeleer"]
+CMD ["/app/chinxeleer.rs"]
